@@ -1,0 +1,5 @@
+#summary Kuvaus käytetystä tekniikasta.
+
+Äänestystiedot haetaan Eduskunnan sivuilta screen scraping -tekniikalla, PHP Simple HTML DOM Parserin [http://simplehtmldom.sourceforge.net/] avulla. Päivitystyökalu (save.php) on rakennettu Codeigniter (CI) -frameworkin päälle. Tiedot tallennetaan yksinkertaiseen MySQL-tietokantaan.
+
+Rajapinta on myös toteutettu CI:n avulla, mutta tämän ja käyttäjän välissä on yksinkertainen PHP-skripti (osin historiallisista syistä, ja koska CI ei suoraan tule GET-muuttujia). Se ottaa vastaan parametrit käyttäjältä, välittää ne CI:lle ja palauttaa CI:n tuottaman XML:n takaisin käyttäjälle.
