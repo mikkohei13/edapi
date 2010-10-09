@@ -2,10 +2,9 @@
 <?php
 
 /*
-ƒ‰nestyskone
+ƒ‰nestyskone; tulossivu
 Mikko Heikkinen 8-9/2010
 
-Vertaa k‰ytt‰j‰n ‰‰nestysvalintoja kansanedustajien valintoihin ja n‰ytt‰‰ edustajat osuvuusj‰rjestyksess‰.
 */
 
 // How to Get the Current Page URL
@@ -186,20 +185,16 @@ foreach ($selects as $aanestystunniste => $toivottuvalinta)
 			// Edustaja ‰‰nesti "oikein"
 			if ($edustaja['valinta'] == $toivottuvalinta)
 			{
-	//			echo "\n" . $edustaja['edustaja'] . " +1"; // debug
 				$tulos[$edustaja['edustaja']]['pisteet'] = $tulos[$edustaja['edustaja']]['pisteet'] + 1; // lis‰t‰‰n 1
 			}
 			// Edustaja ‰‰nesti "v‰‰rin"
 			elseif ($edustaja['valinta'] == $ei_toivottuvalinta)
 			{
-	//			echo "\n" . $edustaja['edustaja'] . " -1"; // debug
 				$tulos[$edustaja['edustaja']]['pisteet'] = $tulos[$edustaja['edustaja']]['pisteet'] - 1; // v‰hennet‰‰n 1
 			}
 			// Edustaja ‰‰nesti Tyhj‰‰
 			elseif ($edustaja['valinta'] == "Tyhj‰‰")
 			{
-	//			echo "\n" . $edustaja['edustaja'] . " ‰‰nesti tyhj‰‰"; // debug
-	//			echo "\n" . $edustaja['edustaja'] . " -0,5"; // debug
 				$tulos[$edustaja['edustaja']]['pisteet'] = $tulos[$edustaja['edustaja']]['pisteet'] - 0.5;
 				$tulos[$edustaja['edustaja']]['tyhjaa'] = $tulos[$edustaja['edustaja']]['tyhjaa'] + 1;
 			}
@@ -270,9 +265,6 @@ arsort($pisteet);
 		...	
 	--------------------------------- */
 
-// TODO: tarkista ovatko tulokset oikein
-// print_r ($pisteet);
-
 // -----------------------------------------------------------------------------------------------
 // HTML:n TULOSTUS
 
@@ -318,20 +310,6 @@ foreach($pisteet as $nimi => $pistemaara)
 {
 	$teksti = "";
 	$mukanateksti = "";
-
-	/*
-	if (isset($tiedot['poissa']))
-		$teksti = $teksti . "poissa " . $tiedot['poissa'] . " kertaa,";
-		
-	if (isset($tiedot['tyhjaa']))
-		$teksti = $teksti . "‰‰nesti tyhj‰‰ " . $tiedot['tyhjaa'] . " kertaa";
-		
-	if ($tiedot['edustajana'] < $count)
-		$mukanateksti = "kansanedustajana " . $tiedot['edustajana'] . " ‰‰nestyksess‰";
-		
-	$teksti = trim($teksti, ",");
-	$teksti = str_replace(",", ",<br />", $teksti);
-	*/
 
 	// Kootaan lis‰tietoteksti
 	if (isset($tulos[$nimi]['poissa']))
