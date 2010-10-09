@@ -24,7 +24,7 @@ $url = $_GET['url'];
 
 $url = urlencode($url);
 
-$url = "http://api.bit.ly/v3/shorten?login=mikkohei13&apiKey=$bitly_apikey&longUrl=" . $url . "&format=txt";
+$url = "http://api.bit.ly/v3/shorten?login=" . $bitly_login . "&apiKey=" . $bitly_apikey . "&longUrl=" . $url . "&format=txt";
 
 if (!function_exists('curl_init')) {
 	echo "CURL not installed";
