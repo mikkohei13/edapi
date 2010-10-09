@@ -1,3 +1,14 @@
+
+<?php
+
+/*
+Äänestyskone; etusivu
+Mikko Heikkinen 8-9/2010
+
+Äänestyskone vertaa käyttäjän äänestysvalintoja kansanedustajien valintoihin ja näyttää edustajat osuvuusjärjestyksessä.
+*/
+	
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
