@@ -5,7 +5,14 @@
 Äänestyskone; etusivu
 Mikko Heikkinen 8-9/2010
 
-Äänestyskone vertaa käyttäjän äänestysvalintoja kansanedustajien valintoihin ja näyttää edustajat osuvuusjärjestyksessä.
+Äänestyskone vertaa käyttäjän äänestysvalintoja kansanedustajien valintoihin
+ja näyttää edustajat osuvuusjärjestyksessä.
+
+Varsinainen vertailu tapahtuu sivulla tulos.php. Tällä sivulla on lomake,
+joka lähettää tiedot sopivassa muodossa GET-muuttujina tulos.php:lle.
+Tulos.php-sivua voi käyttää myös lähettämällä sille äänestysten tiedot vastaavassa muodossa
+muulla tavalla (toisella lomakkella, linkin avulla...).
+
 */
 	
 ?>

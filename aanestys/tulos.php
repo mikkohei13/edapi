@@ -5,6 +5,17 @@
 Äänestyskone; tulossivu
 Mikko Heikkinen 8-9/2010
 
+Toiminnan pääperiaate:
+1) Hakee GET-muuttujista käyttäjän tekemät äänestysvalinnat (n kappaletta äänestystunnisteita ja niitä vastaavat jaa/ei/ei merkitystä -valinnat)
+2) Käydään äänestykset läpi yksi kerrallaan
+2a) Haetaan äänestyksen tiedot tietokannasta
+2b) Käydään läpi äänestyksen tiedot yksi edustaja kerrallaan
+2b1) Lisätään/vähennetään edustajan pisteitä sen mukaan vastaako hänen valintansa käyttäjän valintaa
+2b2) Lisätään edustajana- ja poissaolotiedot
+3) Tuloksena saadaan array, kunkin edustajan pistemääristä, edustajanolosta ja poissaoloista.
+4) Järjestetään array pistemäärän mukaan
+5) Tulostetaan pistetaulukko, jossa on mukana myös edustajana- ja poissaolotiedot kustakin edustajasta
+
 */
 
 // How to Get the Current Page URL
