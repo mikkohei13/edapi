@@ -128,11 +128,12 @@ Save</label></p>
 		unset($temp);
 		$temp = explode(".", $pvm);
 		$pvm = $temp[2] . $temp[1] . $temp[0]; // muodossa 20100219
-		unset($temp);
 		$pvm = trim($pvm);
 		
 //		echo "<p>PVM: $pvm";
-		
+		$vuosi = $temp[2];
+		unset($temp);		
+
 		$start = strpos($istunto, "PTK+");
 		$start = $start + 4; // Lis‰t‰‰n needlen pituus
 		$end = strlen($istunto);
@@ -143,7 +144,6 @@ Save</label></p>
 		
 		$temp = explode("-", $istuntokoodi);
 		$istunto = trim($temp[0]);
-		$vuosi = trim($temp[1]);
 		
 //		echo "<p>ISTUNTO: $istunto";
 //		echo "<p>VUOSI: $vuosi";
@@ -314,7 +314,7 @@ Save</label></p>
 		}
 		else
 		{
-			$msg = $msg . "vuosi virheellinen<br/>";
+			$msg = $msg . "vuosi virheellinen (po. " . date("Y") . ")<br/>";
 			$error++;
 		}
 		
