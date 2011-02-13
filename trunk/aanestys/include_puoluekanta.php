@@ -309,7 +309,7 @@ $puoluekanta['Ukkola Tuulikki'] = "kok";
 $puoluekanta['Uotila Kari'] = "vas";
 $puoluekanta['Urpilainen Jutta'] = "sd";
 $puoluekanta['Urpilainen Kari'] = "sd";
-$puoluekanta['Uusipaavalniemi Markku'] = "kesk";
+$puoluekanta['Uusipaavalniemi Markku'] = "ps";
 $puoluekanta['Vahasalo Raija'] = "kok";
 $puoluekanta['Wallin Harry'] = "sd";
 $puoluekanta['Wallin Stefan'] = "r";
@@ -341,4 +341,7 @@ $puoluekanta['Väätäinen Tuula'] = "sd";
 $puoluekanta['Ylä-Mononen Jaana'] = "kesk";
 $puoluekanta['Yrttiaho Jyrki'] = "vas";
 $puoluekanta['Zyskowicz Ben'] = "kok";
+$puoluekanta['Andersson Claes'] = "vas";
+$puoluekanta['Korhonen Timo'] = "kesk"; // Onko sama kuin "Timo V. Korhonen"
+
 ?>
